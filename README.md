@@ -75,31 +75,31 @@ machine if you don't. !!! If not, run the following command to open SSH in ufw t
 	    }
 	]
 ```
- - Change the addresses and insert/remove entries accordingly to your configuration:
+ Change the addresses and insert/remove entries accordingly to your configuration:
 
- - Put "relays.json" together with "ufw-dynamic-ip-updater.py" in a root's accessible directory (e.g. /root/)
+ Put "relays.json" together with "ufw-dynamic-ip-updater.py" in a root's accessible directory (e.g. /root/)
 
- - Make the script runnable by:
+ Make the script runnable by:
 
     chmod 755 ufw-dynamic-ip-updater.py
 
- - Put the following line in root's cron (you can run "sudo crontab -e"), it will execute every 2 min. (change the way you prefer):
+ Put the following line in root's cron (you can run "sudo crontab -e"), it will execute every 2 min. (change the way you prefer):
 
     */2 * * * * /root/ufw-dynamic-ip-updater.py -f /root/relay.json -v >> /root/relay.log 2>&1
 
- - Make sure you have "ufw", "getent" and "python3" installed. Python3 should reside in: "/usr/bin/python3".
+ Make sure you have "ufw", "getent" and "python3" installed. Python3 should reside in: "/usr/bin/python3".
 
- - Verify that the variables point to the correct location of these programs in your OS. Change the paths if needed in the "ufw-dynamic-ip-updater.py" script, lines 31 and 32:
-
+ Verify that the variables point to the correct location of these programs in your OS. Change the paths if needed in the "ufw-dynamic-ip-updater.py" script, lines 31 and 32:
+ 
     GETENT =  "/usr/bin/getent"
     UFW = "/usr/sbin/ufw"
 
 ## How it works
 
- - Cron runs "ufw-dynamic-ip-updater.py" script every 2 minutes, and it:
-     - Reads the dynamic ip hostnames listed in relays.json and resolves the addresses using the "getent" software.
-     - Verifies if any of the IPs have changed, and if so updates ufw rules.
-     - Dumps a new "relays.json" with new IPs.
+Cron runs "ufw-dynamic-ip-updater.py" script every 2 minutes, and it:
+ - Reads the dynamic ip hostnames listed in relays.json and resolves the addresses using the "getent" software.
+ - Verifies if any of the IPs have changed, and if so updates ufw rules.
+ - Dumps a new "relays.json" with new IPs.
 
 ## Some features implemented
 
@@ -109,9 +109,9 @@ machine if you don't. !!! If not, run the following command to open SSH in ufw t
 
 ## NOTE:
 
- - If you liked it, consider delegating your ADA to [BioStakingPool - BIO](https://biostakingpool.hopto.org) - this is Darwin's Stake Pool ;-)
+ If you liked it, consider delegating your ADA to [BioStakingPool - BIO](https://biostakingpool.hopto.org) - this is Darwin's Stake Pool ;-)
 
- - Or if you prefer, donate lovelaces to:  
+ Or if you prefer, donate lovelaces to:  
     
     addr1q8dcts6dqy4x28kazkt6snqkskpf7wl0awa9m3xqzv3nnyxg66dcjy55dyrnplgszvzfj6gv3unjk0n3w4qhvvka2ufqmj9nt0
 

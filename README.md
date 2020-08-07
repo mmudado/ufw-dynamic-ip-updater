@@ -109,7 +109,7 @@ machine if you don't. !!! If not, run the following command to open SSH in ufw t
 
 ## NOTE:
 
- - If you liked it, consider delegating your ADA to [BIO](https://biostakingpool.hopto.org) - this is Darwin's Stake Pool ;-)
+ - If you liked it, consider delegating your ADA to [BioStakingPool - BIO](https://biostakingpool.hopto.org) - this is Darwin's Stake Pool ;-)
 
  - Or if you prefer, donate lovelaces to:  
     

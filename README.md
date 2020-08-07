@@ -51,7 +51,7 @@ machine if you don't. !!! If not, run the following command to open SSH in ufw t
 
  - Create a file named "relay.json" with the format below (a list of dictionaries). 
 
-
+```json
 	[
 	    {
 		"name": "relay1.net.io",
@@ -74,7 +74,7 @@ machine if you don't. !!! If not, run the following command to open SSH in ufw t
 		"port": "3001"
 	    }
 	]
-
+```
  - Change the addresses and insert/remove entries accordingly to your configuration:
 
  - Put "relays.json" together with "ufw-dynamic-ip-updater.py" in a root's accessible directory (e.g. /root/)
@@ -109,10 +109,14 @@ machine if you don't. !!! If not, run the following command to open SSH in ufw t
 
 ## NOTE:
 
- - If you liked it, consider delegating your ADA to biostakingpool.hopto.org - ticker [ BIO ] - this is Darwin's Stake Pool ;-)
- - Or if you prefer, donate lovelaces to:  addr1q8dcts6dqy4x28kazkt6snqkskpf7wl0awa9m3xqzv3nnyxg66dcjy55dyrnplgszvzfj6gv3unjk0n3w4qhvvka2ufqmj9nt0
+ - If you liked it, consider delegating your ADA to [BIO](https://biostakingpool.hopto.org) - this is Darwin's Stake Pool ;-)
+
+ - Or if you prefer, donate lovelaces to:  
+    
+    addr1q8dcts6dqy4x28kazkt6snqkskpf7wl0awa9m3xqzv3nnyxg66dcjy55dyrnplgszvzfj6gv3unjk0n3w4qhvvka2ufqmj9nt0
 
 ## LICENSE
+
 ufw-dynamic-ip-updater.py is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation, either version 3 of the License, or

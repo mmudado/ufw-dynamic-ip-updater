@@ -34,11 +34,12 @@ Dummy example of a ufw configuration from such a producer node, port 3001 open o
 
 ## Before you begin
  
- - !!! Make sure **you have a SSH port already open** by ufw rules !!! You may lose communication to your
+ !!! Make sure **you have a SSH port already open** by ufw rules !!! You may lose communication to your
 machine if you don't. !!! If not, run the following command to open SSH in ufw to your machine:
 
-    sudo ufw allow from <YOUR-IP> to any port <SSH-PORT>
 
+    sudo ufw allow from <YOUR-IP> to any port <SSH-PORT>
+    
  - ufw-dynamic-ip-updater.py enables ufw by default.
 
  - ufw-dynamic-ip-updater.py **does not disable ufw or removes rules** not related in the .json file.

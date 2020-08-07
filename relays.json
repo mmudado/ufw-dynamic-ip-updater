@@ -1,0 +1,22 @@
+[
+    {
+        "name": "relay1.net.io",
+        "ipv4": "0.0.0.0",
+        "port": "3001"
+    },
+    {
+        "name": "relay2.hopto.org",
+        "ipv4": "0.0.0.0",
+        "port": "3001"
+    },
+    {
+        "name": "relay3.com.br",
+        "ipv4": "0.0.0.0",
+        "port": "3001"
+    },
+    {
+        "name": "relay4.dns.me",
+        "ipv4": "0.0.0.0",
+        "port": "3001"
+    }
+]

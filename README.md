@@ -9,14 +9,20 @@ Say you have a machine in which the input communications should be filtered by s
 And say these IPs are dynamic and change often.
 
 Example: A Cardano producer node, part of a stake pool operation, that can only communicate with its relays by specific ports.
-To provide better security, this producer node also filters the incoming communications by the relays's IPs.
+To provide better security, this producer node also filters the incoming communications by the relays's IPs. 
+
+Check out the Cardano's Foundation [best security approaches](https://docs.cardano.org/projects/cardano-node/en/latest/stake-pool-operations/node_keys.html#basic-block-producing-node-firewall-configuration) for a block producing node: 
+
+ - Make sure you can only login with SSH Keys, not password.
+ - Make sure to setup SSH connections in a port different than the default 22
+ - Make sure to configure the firewall to only allow connections from your relay nodes by setting up their ip addresses.
 
 Some of the relays may have dynamic IPs, so the firewall (e.g. ufw/iptables) from this producer node have to be updated
  every time its relays's IPs change. 
 
 Ufw uses iptables to set firewall rules, and unfortunatelly they cannot resolve hostname addresses, so this needs to be done in another way.
 
-Dummy example of a ufw configuration from such a producer node, port 3001 open only to the specified relays's IPs, and SSH port open to your machine's IP:
+Dummy example of a ufw configuration from such a producer node, port 3001 open only to the specified relays's IPs, and default SSH port open to your machine's IP:
 
 	$ sudo ufw status numbered
 
@@ -31,6 +37,7 @@ Dummy example of a ufw configuration from such a producer node, port 3001 open o
 	[ 5] 22/tcp                     ALLOW IN    123.123.123.123                  
 	[ 6] 22/tcp (v6)                ALLOW IN    123.123.123.123.   
 
+In the example above, it would be desirable to change the default SSH port (22) to any random other.
 
 ## Before you begin
  

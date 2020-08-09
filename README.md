@@ -97,7 +97,7 @@ machine if you don't. !!! If not, run the following command to open SSH in ufw t
 
  Make sure you have "ufw", "getent" and "python3" installed. Python3 should reside in: "/usr/bin/python3".
 
- Verify that the variables point to the correct location of these programs in your OS. Change the paths if needed in the "ufw-dynamic-ip-updater.py" script, lines 31 and 32:
+ **Verify that the variables point to the correct location of these programs in your OS. Change the paths if needed in the "ufw-dynamic-ip-updater.py" script, lines 31 and 32**:
  
     GETENT =  "/usr/bin/getent"
     UFW = "/usr/sbin/ufw"

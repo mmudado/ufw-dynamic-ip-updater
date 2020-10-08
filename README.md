@@ -115,13 +115,6 @@ Cron runs "ufw-dynamic-ip-updater.py" script every 2 minutes, and it:
  - Format checkings for the .json file.
  - Verbose mode allows to check the output "relay.log" file.
 
-## NOTE:
-
- If you liked it, consider delegating your ADA to [BioStakingPool - BIO](https://biostakingpool.hopto.org) - this is Darwin's Stake Pool ;-)
-
- Or if you prefer, donate lovelaces to:  
-    
-    addr1q8dcts6dqy4x28kazkt6snqkskpf7wl0awa9m3xqzv3nnyxg66dcjy55dyrnplgszvzfj6gv3unjk0n3w4qhvvka2ufqmj9nt0
 
 ## LICENSE
 
